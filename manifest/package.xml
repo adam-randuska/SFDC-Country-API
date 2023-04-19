@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<version>57.0</version>
+	<types>
+		<name>ApexClass</name>
+		<members>*</members>
+	</types>
+	<types>
+		<name>ApexTrigger</name>
+		<members>LeadTrigger</members>
+	</types>
+	<types>
+		<name>CustomObject</name>
+		<members>Country__c</members>
+		<members>Lead</members>
+	</types>
+	<types>
+		<name>Flow</name>
+    	<members>Save_Lead_Timestamp_Owner_Since</members>
+	</types>
+	<types>
+		<name>Layout</name>
+		<members>Lead-Lead Layout</members>
+		<members>Country__c-Country Layout</members>
+	</types>
+	<types>
+		<name>ValidationRule</name>
+        <members>Prevent_Owner_Change</members>
+    </types>
+	<types>
+		<name>StaticResource</name>
+		<members>GetCountriesResponse</members>
+	</types>
+	<types>
+		<name>CustomTab</name>
+		<members>Country__c</members>
+	</types>
+</Package>

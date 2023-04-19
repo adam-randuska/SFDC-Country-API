@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Owner_Change</fullName>
+    <active>true</active>
+    <description>Prevent Users to modify Owner if Country, Lead Source and No. of Employees are not filled in.</description>
+    <errorConditionFormula>AND(ISCHANGED(OwnerId),
+  OR(
+    ISPICKVAL(LeadSource,&apos;&apos;),
+    AND($Profile.Name != &apos;System Administrator&apos;, ISBLANK(Country)),
+    AND($Profile.Name != &apos;System Administrator&apos;, $Profile.Name != &apos;Contract Manager&apos;, ISBLANK(NumberOfEmployees))
+  )
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to modify Owner unless Country, Lead Source and No. of Employees are filled in</errorMessage>
+</ValidationRule>
